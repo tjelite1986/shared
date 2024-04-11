@@ -1,1 +1,20 @@
-g
+services:
+  radarrhd:
+    container_name: radarrhd
+    image: ghcr.io/hotio/radarr
+    networks:
+      - docker_default
+    ports:
+      - "7878:7878"
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      UMASK: '002'
+      TZ: 'Europe/Stockholm'
+    volumes:
+      - /opt/config/radarrhd:/config
+      - /mnt:/mnt
+
+networks:
+  docker_default:
+    external: true
