@@ -26,5 +26,5 @@ For this to work you need a Real-debrid and Elfhost account.
 9. Go to radar with direct url or dashboard.
 10. In activity you can see all the movies that you have add to the blackhole folder. You need to add the movies to the Radarr library if you not do that the movie will not import
 
-# its the same for shows to sonarr but you replace the location with symlinks/shows and elfbot blackhole sonarr.
-# Some times it better to add the season one by one instead of all in one download. Sometimes you need to help sonarr import the episode and add the shows/season/episodes information manually.
+### its the same for shows to sonarr but you replace the location with symlinks/shows and elfbot blackhole sonarr.
+### Some times it better to add the season one by one instead of all in one download. Sometimes you need to help sonarr import the episode and add the shows/season/episodes information manually.
