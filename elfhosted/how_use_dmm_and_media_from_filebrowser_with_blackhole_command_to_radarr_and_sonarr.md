@@ -9,24 +9,22 @@ For this to work you need a Real-debrid and Elfhost account.
      - Right click on the picture.
      - Now you will see in the right bottom corner that DMM looking for all the releases of this movie.
      - Choose the release you want and Click the botton Add to RD library. Its a Green botton.
-OBS!!!!!!!!!!! 
+
 4. Now go to the filebrowser in you elfhost Account. Choose one of this alternative.
      - Go to you homepage/dashboard
-       https://[user].elfhosted.com/
+       https://[user].elfhosted.com
        tools - filebrowser
-     - 
-     
-4. Efter film/serier är tillagda gå till elfhost dashboard. 
-https://[user].elfhosted.com/
-Välj tools - filebrowser 
-5 Gå till någon av dessa folders:
-Tv serier:
-realdebrid-zurg/shows
-Tryck på ikonen <> längst upp till höger skriv detta och tryck enter.
-elfbot blackhole sonarr 
-Movies:
-realdebrid-zurg/movies
-Tryck på ikonen <> längst upp till höger skriv detta och tryck enter.
-elfbot blackhole sonarr 
-6. Gå till sonarr/radarr se till att lägga till dom filmerna som du ej har och invänta att alla filer importeras.
-Du ser alla filmer/serier som som laddas ner på activity. Är texten svart då är inte dom tillagda på sonar/radarr. Blir dom gula fast serien/filmen finns så kan vi ta de då. 
+     - Go directly to you filebrowser
+       https://[user]-filebrowser.elfhosted.com
+5. If you not have a blackhole folder go to symlinks and create a folder with name blackhole and inside create a folder radarr and sonarr etc.
+6. Add blackhole in sonarr/radarr in download clients.
+6. Go to this location:
+   realdebrid-zurg/movies
+7. In the top right corner you see the icon <> click on it to open terminal
+8. Write this command in the terminal and press Enter on you keyboard
+## elfbot blackhole radarr
+9. Go to radar with direct url or dashboard.
+10. In activity you can see all the movies that you have add to the blackhole folder. You need to add the movies to the Radarr library if you not do that the movie will not import
+
+# its the same for shows to sonarr but you replace the location with symlinks/shows and elfbot blackhole sonarr.
+# Some times it better to add the season one by one instead of all in one download. Sometimes you need to help sonarr import the episode and add the shows/season/episodes information manually.
