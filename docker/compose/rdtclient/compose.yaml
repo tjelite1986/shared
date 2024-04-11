@@ -1,0 +1,22 @@
+  rdtclient:
+    image: pukabyte/rdtclient:latest
+    container_name: rdtclient
+    networks:
+      - docker_default
+    ports:
+      - '6500:6500'
+    hostname: rdtclient
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /mnt:/mnt
+      - /opt/config/rdtclient/data:/data
+      - /opt/config/rdtclient/data/db:/data/db
+    restart: unless-stopped
+      
+      
+networks:
+  docker_default:
+    external: true
