@@ -3,7 +3,13 @@ For this to work you need a Real-debrid and Elfhost account.
 
 1. https://debridmediamanager.com
 2. Login Real-debrid
-3. Add serie/movies
+3. Click on Search
+     - Search the movie Fight Club
+     - Now you should see the a picture with the Fight Club.
+     - Right click on the picture.
+     - Now you will see in the right bottom corner that DMM looking for all the releases of this movie.
+     - Choose the release you want and Click the botton Add to debrid.
+5. Add serie/movies
 OBS!!!!!!!!!!! 
 LLÄGG INTE TILL FILM/SERIER SOM REDAN FINNS. DÅ ERSÄTTER SONARR/RADARR DEN SOM REDAN FINNS. LADDA ALDRIG NER EN BARNFILM SOM REDAN FINNS MED SWEDISH ELLER NORDIC TAG. 
 * Försök välja 1080p Remux istället för 2160p. Blir mindre buff. Lägg dig på ca 30GBish i max storlek.
