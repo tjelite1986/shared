@@ -8,19 +8,14 @@ For this to work you need a Real-debrid and Elfhost account.
      - Now you should see the a picture with the Fight Club.
      - Right click on the picture.
      - Now you will see in the right bottom corner that DMM looking for all the releases of this movie.
-     - Choose the release you want and Click the botton Add to debrid.
-5. Add serie/movies
+     - Choose the release you want and Click the botton Add to RD library. Its a Green botton.
 OBS!!!!!!!!!!! 
-LLÄGG INTE TILL FILM/SERIER SOM REDAN FINNS. DÅ ERSÄTTER SONARR/RADARR DEN SOM REDAN FINNS. LADDA ALDRIG NER EN BARNFILM SOM REDAN FINNS MED SWEDISH ELLER NORDIC TAG. 
-* Försök välja 1080p Remux istället för 2160p. Blir mindre buff. Lägg dig på ca 30GBish i max storlek.
-* Försök använda dig av dessa releases i den ordning som är skrivna. Finns tex FraMeSToR på 25GB och FGT på 30GB ta FraMeSToR
-  - FraMeSToR
-  - FGT
-  - SWTYBLZ
-  - CYBER
-  - Tigole
-  - RARBG
-  - YTD
+4. Now go to the filebrowser in you elfhost Account. Choose one of this alternative.
+     - Go to you homepage/dashboard
+       https://[user].elfhosted.com/
+       tools - filebrowser
+     - 
+     
 4. Efter film/serier är tillagda gå till elfhost dashboard. 
 https://[user].elfhosted.com/
 Välj tools - filebrowser 
