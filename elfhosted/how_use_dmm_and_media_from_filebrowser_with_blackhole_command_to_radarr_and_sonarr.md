@@ -1,4 +1,5 @@
-** Here is a walkthrough how to use DMM and Blackhole commands in filebrowser **
+## Here is a walkthrough how to use DMM and Blackhole commands in filebrowser
+For this to work you need a Real-debrid and Elfhost account.
 
 1. https://debridmediamanager.com
 2. Login Real-debrid
