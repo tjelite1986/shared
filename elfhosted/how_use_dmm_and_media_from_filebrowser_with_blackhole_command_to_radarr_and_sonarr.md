@@ -18,6 +18,16 @@ For this to work you need a Real-debrid and Elfhost account.
        ```https://[user]-filebrowser.elfhosted.com```
 5. If you not have a blackhole folder go to symlinks and create a folder with name blackhole and inside create a folder radarr and sonarr etc.
 6. Add blackhole in sonarr/radarr in download clients.
+     - Go to radarr/sonarr
+     - Settings - Download Clients
+     - Click on the +
+     - Choose Usenet Blackhole
+     - Add a name ( Usenet Blackhole )
+     - Check Enable
+     - Nzb Folder  / choose one not important wish
+     - Watch Folder ( /storage/symlinks/blackhole/radarr/)
+     - Uncheck Remove Completed and Remove Failed
+      - Click test and if it works save
 6. Go to this location:
    ```realdebrid-zurg/movies```
 7. In the top right corner you see the icon <> click on it to open terminal
