@@ -20,3 +20,40 @@
 networks:
   docker_default:
     external: true
+    
+# Setup #
+# General:
+# Log level: Debug
+# Maximum parallel downloads: 100
+# Maximum unpack processes: 100
+# Categories: radarr,radarrhd,radarrkids,sonarr
+####
+# Download client #
+# Download client: Symlinks Downloader 
+# Download path: /storage/symlinks/downloads/
+# Mapped path: /storage/symlinks/downloads/
+# Parallel connections per download: 4
+# Chunk Count: 8
+# Rclone mount path: /path/to/realdebrid-zurg/__all__
+## Provider ##
+# Provider: Real-Debrid
+# API Key: ***************************
+# Automatically delete downloads removed from provider: Check
+# Connection Timeout: 10
+# Check Interval: 10
+# Post Torrent Download Action: Download all files to host
+# Only download available files on debrid provider: Check
+# Minimum file size to download: 5 or 100
+# Automatic retry torrent: 10
+# Automatic retry downloads: 10
+# Delete download when in error: 60
+# Torrent maximum lifetime: 60
+## qBittorrents / *darr ##
+# Post Torrent Download Action: Downloads all files to host
+# Post Download Action: Remove torrent from Clients
+# Only download available files on debrid provider: Check
+# Minimum file size to download: 5
+# Automatic retry torrent: 10
+# Automatic retry downloads: 10
+# Delete download when in error: 60
+# Torrent maximum lifetime: 60 
