@@ -1,4 +1,4 @@
-services:'
+services:
 # Nginx Web-Server
   web:
     container_name: nginx-web
