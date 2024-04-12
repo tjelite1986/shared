@@ -1,0 +1,20 @@
+services:
+  plex-meta-manager:
+    image: meisnate12/plex-meta-manager:latest
+    container_name: plex-meta-manager
+    networks:
+      - docker_default
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+      PMM_CONFIG: '/config/config.yml' #optional
+      PMM_TIME: '03:00' #optional
+      PMM_RUN: 'False' #optional
+      PMM_TEST: 'False' #optional
+      PMM_NO_MISSING: 'False' #optional
+    volumes:
+      - /opt/config/pmm:/config
+networks:
+  docker_default:
+    external: true
