@@ -1,0 +1,20 @@
+services:
+  homepage:
+    container_name: homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    networks:
+      - docker_default
+    ports:
+      - 3000:3000
+   # env_file: 
+    #  - /home/thomas/compose/env/.env
+    environment:
+      PUID: 1000
+      PGID: 1000
+    volumes:
+      - /opt/config/homepage:/config
+    #  - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
+    restart: unless-stopped
+networks:
+  docker_default:
+    external: true
