@@ -1,0 +1,24 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    networks:
+      - docker_default
+    ports:
+      - '8444:8443'
+    volumes:
+      - /opt/config/code-server:/config
+      - /mnt:/mnt
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+      PASSWORD: 'password'
+      HASHED_PASSWORD: '' #optional
+      SUDO_PASSWORD: 'root' #optional
+      SUDO_PASSWORD_HASH: '' #optional
+      PROXY_DOMAIN: '$PROXY_DOMAIN' #optional
+      DEFAULT_WORKSPACE: '/path/to'
+networks:
+  docker_default:
+    external: true
