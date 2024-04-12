@@ -1,0 +1,30 @@
+services:'
+# Nginx Web-Server
+  web:
+    container_name: nginx-web
+    image: nginx:latest
+    networks:
+      - docker_default
+    ports:
+      - "84:80"
+    volumes:
+      - /opt/config/nginxweb/html/src:/usr/share/nginx/html
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+    links:
+      - php
+  php:
+    image: php:7-fpm
+    networks:
+      - docker_default
+    volumes:
+      - /opt/config/nginxweb/php/src:/usr/local/etc/php
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+networks:
+  docker_default:
+    external: true
