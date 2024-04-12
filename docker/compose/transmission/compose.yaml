@@ -1,0 +1,30 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    networks:
+      - docker_default
+    ports:
+      - '9091:9091'
+      - '51413:51413'
+      - '51413:51413/udp'
+    volumes:
+      - /opt/config/transmission/config:/config
+      - /mnt/downloads:/downloads
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+      TRANSMISSION_WEB_HOME: #optional
+      USER: 'admin'
+      PASS: 'admin'
+      WHITELIST: '' #optional
+      PEERPORT: '' #optional
+      HOST_WHITELIST: '' #optional
+      LOG_TO_STDOUT: 'true'
+      DOCKER_MODS: 'linuxserver/mods:transmission-transmissionic'
+
+networks:
+  docker_default:
+    external: true
