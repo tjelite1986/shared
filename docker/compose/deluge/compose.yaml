@@ -1,0 +1,25 @@
+services:
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: 'europe/stockholm'
+      DELUGE_LOGLEVEL: error #optional
+    volumes:
+      - /opt/config/deluge:/config
+      - /mnt/storage/torrents:/data/torrents
+    networks:
+      - docker_default
+    ports:
+      -  '8112:8112'
+      -  '6881:6881'
+      -  '6881:6881/udp'
+      -  '58846:58846' #optional
+    restart: unless-stopped
+    
+networks:
+  docker_default:
+    external: true
+      
