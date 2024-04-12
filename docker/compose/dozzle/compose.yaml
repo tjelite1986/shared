@@ -1,0 +1,23 @@
+services:
+    dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    networks:
+      - docker_default
+    ports:
+      - "8082:8080" # qBittorrent is using port 8080
+    environment:
+      DOZZLE_LEVEL: 'info'
+      DOZZLE_TAILSIZE: '300'
+      DOZZLE_FILTER: 'status=running'
+      USERNAME: 'admin'
+      PASSWORD: 'password'
+      PUID: '1000'
+      PGID: '1000'
+      # DOZZLE_FILTER: 'label=log_me' # limits logs displayed to containers with this label.
+      # DOCKER_HOST: tcp://socket-proxy:2375 # Use this instead if you have Socket Proxy enabled.
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+networks:
+  docker_default:
+    external: true
