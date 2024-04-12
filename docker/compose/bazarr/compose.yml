@@ -1,0 +1,18 @@
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr
+    container_name: bazarr
+    networks:
+      - docker_default
+    ports:
+      - '6767:6767'
+    volumes:
+      - /opt/config/bazarr:/config
+      - /mnt:/mnt
+    environment:
+      TZ: 'Europe/Stockholm'
+      PUID: '1000'
+      PGID: '1000'
+networks:
+  docker_default:
+    external: true
