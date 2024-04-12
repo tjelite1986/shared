@@ -1,0 +1,31 @@
+services:
+  plex:
+    container_name: plex
+    restart: unless-stopped
+    ports:
+      - '32400:32400/tcp'
+#      - '1900:1900/udp'
+      - '8324:8324/tcp'
+      - '32469:32469/tcp'
+      - '32410:32410/udp'
+      - '32412:32412/udp'
+      - '32413:32413/udp'
+      - '32414:32414/udp'
+    image: plexinc/pms-docker
+    volumes:
+      - /opt/config/plex:/config
+      - /opt/config/plex/transcode:/transcode
+      - /mnt:/mnt
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: 'Europe/Stockholm'
+      PLEX_CLAIM: 'claim-xxxxx'
+      ADVERTISE_IP: 'https://plex.example.com'
+      HOSTNAME: 'hostmane'
+    networks:
+      - docker_default
+networks:
+  docker_default:
+    external: true
+    
