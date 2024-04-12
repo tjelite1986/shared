@@ -1,0 +1,18 @@
+services:
+  plextraktsync:
+    container_name: plextraktsync
+    restart: on-failure:2
+    image: ghcr.io/taxel/plextraktsync
+    command: sync
+    volumes:
+      - /opt/config/plextraktsync:/app/config
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: 'Europe/Stockholm'
+    networks:
+      - docker_default
+networks:
+  docker_default:
+    external: true
+    
