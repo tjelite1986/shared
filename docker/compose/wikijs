@@ -1,0 +1,48 @@
+services:
+  db:
+    container_name: db
+    image: postgres:15-alpine
+    networks:
+      - docker_default
+    environment:
+      POSTGRES_DB: 'wiki'
+      POSTGRES_PASSWORD: 'password'
+      POSTGRES_USER: 'user'
+    logging:
+      driver: none
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - docker_default
+############
+## Wikijs ##
+############
+  wiki:
+    container_name: wiki
+    image: requarks/wiki:2.5
+    networks:
+      - docker_default
+    depends_on:
+      - db
+    environment:
+      DB_TYPE: 'postgres'
+      DB_HOST: 'db'
+      DB_PORT: '5432'
+      DB_USER: 'user'
+      DB_PASS: 'password'
+      DB_NAME: 'wiki'
+#      CONFIG_FILE: './config.yml'
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    networks:
+      - docker_default
+
+volumes:
+  db-data: null
+
+
+networks:
+  docker_default:
+    external: true
