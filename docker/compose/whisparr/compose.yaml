@@ -7,13 +7,13 @@ services:
     ports:
       - "6969:6969"
     environment:
-      PUID: '1000'
-      PGID: '1000'
-      UMASK: '002'
-      TZ: 'Europe/Stockholm'
+      PUID: '$PUID'
+      PGID: '$PGID'
+      UMASK: '$UMASK'
+      TZ: '$TZ'
     volumes:
-      - /opt/config/whisparr:/config
-      - /mnt:/mnt
+      - '$WORKDIR/whisparr:/config'
+      - '$DATADIR'
 
 networks:
   docker_default:
