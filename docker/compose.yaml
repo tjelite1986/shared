@@ -1,0 +1,41 @@
+services:
+  radarr:
+    extends:
+      file: ./apps/radarr/compose.yaml
+      service: radarr
+  radarrhd:
+    extends:
+      file: ./apps/radarrhd/compose.yaml
+      service: radarrhd
+  sonarr:
+    extends:
+      file: ./apps/sonarr/compose.yaml
+      service: sonarr
+  sonarrhd:
+    extends:
+      file: ./apps/sonarrhd/compose.yaml
+      service: sonarrhd
+  whisparr:
+    extends:
+      file: ./apps/whisparr/compose.yaml
+      service: whisparr
+  rdtclient:
+    extends:
+      file: ./apps/rdtclient/compose.yaml
+      service: rdtclient
+  qbittorrent:
+    extends:
+      file: ./apps/qbittorrent/compose.yaml
+      service: qbittorrent
+  prowlarr:
+    extends:
+      file: ./apps/prowlarr/compose.yaml
+      service: prowlarr
+  prowlarr-whisparr:
+    extends:
+      file: ./apps/prowlarr-whisparr/compose.yaml
+      service: prowlarr-whisparr
+networks:
+  docker_default:
+    external: true
+    
