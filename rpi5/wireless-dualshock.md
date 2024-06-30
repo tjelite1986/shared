@@ -56,3 +56,7 @@ Discovery started
 [CHG] Device 90:FB:A6:D6:D0:45 LegacyPairing: yes
 [CHG] Device 90:FB:A6:D6:D0:45 RSSI is nil
 ```
+Now follow the steps under Authorize the Dualshock Controller.
+
+
+If the controller led stops blinking (meaning you took too long), just press the “Share” and “PS Home” buttons again.
