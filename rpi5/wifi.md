@@ -28,3 +28,9 @@ android-device-tether wifi_de65fr56325_524632863278
 FBIDrone wifi_je86fe48321_532486348931
 ```
 To connect to one of the wifi networks use the section starting with wifi_. You can use tab to autocomplete the name.
+```
+connmanctl connect wifi_de65fr56325_524632863278
+exit
+```
+You can now be on the network. Check it out by using ip addr or connmanctl state.
+Once done, your Lakka Box should automatically connect on startup. If not, you way have to mark the service as prefered.
