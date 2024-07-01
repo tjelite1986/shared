@@ -29,3 +29,32 @@ Testing version (RetroArch nightly builds (Git)):
 sudo add-apt-repository ppa:libretro/testing && sudo apt-get update && sudo apt-get install retroarch
 ```
 Arch Linux
+Stable version:
+```
+sudo pacman -Sy retroarch
+```
+Git version:
+```
+yaourt -Sy retroarch-git
+```
+Flatpak
+RetroArch on Flathub:
+```
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+```
+flatpak install --user flathub org.libretro.RetroArch
+```
+Update to the latest stable:
+```
+flatpak update --user org.libretro.RetroArch
+```
+Snap (installs latest stable by default; nightlies are available in the "edge" channel)
+RetroArch on Snapcraft:
+```
+sudo snap install retroarch
+```
+Get it from the Snap Store
+
+Steam
+There is a stable version of each release in our Steam version. You will need a Steam account and Steam Client. Here you can register and download the client. After successful registration, you can search for  RetroArch in the store or use this link to go to the appropriate page.
