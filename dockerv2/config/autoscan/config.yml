@@ -1,0 +1,37 @@
+# <- processor ->
+# Override the minimum age before a scan request is sent to the target (Default>
+minimum-age: 0m
+# Override the delay between processed scans (Default 5s):
+scan-delay: 5s
+# override the interval scan stats are displayed (defaults to 1 hour / 0s to di>
+scan-stats: 1h
+# Set anchor files for remote storage. If these are missing no scans will be se>
+anchors:
+  - /mnt/remote/realdebrid/version.txt
+# <- triggers ->
+# Optionally, protect your webhooks with authentication
+authentication:
+  username: user
+  password: password
+# Port for Autoscan webhooks to listen on
+port: 3030
+triggers:
+  sonarr:
+    - name: sonarr # /triggers/sonarr
+      priority: 1
+  radarr:
+    - name: radarr # /triggers/radarr
+      priority: 1
+#  sonarr4k:
+#    - name: sonarr4k # /triggers/sonarr
+#      priority: 1
+#  radarr4k:
+#    - name: radarr4k # /triggers/radarr
+#      priority: 1
+targets:
+  plex:
+    - url: http://plex:32400
+      token: plextoken
+#  jellyfin:
+#    - url: https://jellyfin.domain.xyz
+#      token: Insert Jellyfin Token Here
