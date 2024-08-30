@@ -1,0 +1,19 @@
+services:
+  autoscan:
+    container_name: autoscan
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 3030/tcp
+    hostname: autoscan
+    image: saltydk/autoscan:latest
+    restart: unless-stopped
+    volumes:
+      - /mnt:/mnt
+      - ../config/autoscan:/config
+    networks:
+      - npm_default
+networks:
+  npm_default:
+    external: true
