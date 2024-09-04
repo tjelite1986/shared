@@ -26,8 +26,8 @@ services:
       - "443:443"
       - "8080:8080"
     environment:
-      - "CF_API_EMAIL=tjelite1986@gmail.com"
-      - "CF_API_KEY=5434e1246cb172fc18aef0b85bc0da148f92c"
+      - "CF_API_EMAIL=exemple@gmail.com"
+      - "xxxx"
     volumes:
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
